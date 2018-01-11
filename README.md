@@ -6,11 +6,11 @@
 
   一篇文档的关键词等同于最能表达文档主旨的N个词语，即对于文档来说最重要的词，因此，可以将文本关键词抽取问题转化为词语重要性排序问题，选取排名前TopN个词语作为文本关键词。目前，主流的文本关键词抽取方法主要有以下两大类：
 
-####（1）基于统计的关键词提取方法
+#### （1）基于统计的关键词提取方法
 
   该方法根据统计信息，如词频，来计算得到文档中词语的权重，按权重值排序提取关键词。TF-IDF和TextRank均属于此类方法，其中TF-IDF方法通过计算单文本词频（Term Frequency， TF）和逆文本频率指数（Inverse Document Frequency， IDF）得到词语权重；TextRank方法基于PageRank的思想，通过词语共现窗口构建共现网络，计算词语得分。此类方法简单易行，适用性较强，然而未考虑词序问题。
 
-####（2）基于机器学习的关键词提取方法
+#### （2）基于机器学习的关键词提取方法
 
 该方法包括了SVM、朴素贝叶斯等有监督学习方法，以及K-means、层次聚类等无监督学习方法。在此类方法中，模型的好坏取决于特征提取，而深度学习正是特征提取的一种有效方式。由Google推出的Word2Vec词向量模型，是自然语言领域中具有代表性的学习工具。它在训练语言模型的过程中将词典映射到一个更抽象的向量空间中，每一个词语通过高维向量表示，该向量空间中两点之间的距离就对应两个词语的相似程度。
 
@@ -26,29 +26,29 @@
 
   本实验Python代码的实现使用到了多个著名的第三方模块，主要模块如下所示：
 
-#####（1）Jieba
+##### （1）Jieba
 
   目前使用最为广泛的中文分词组件。下载地址：https://pypi.python.org/pypi/jieba/
 
-#####（2）Gensim
+##### （2）Gensim
 
   用于主题模型、文档索引和大型语料相似度索引的python库，主要用于自然语言处理（NLP）和信息检索（IR）。下载地址：[https://pypi.python.org/pypi/gensim](https://pypi.python.org/pypi/gensim)
 
   本实例中的维基中文语料处理和中文词向量模型构建需要用到该模块。
 
-#####（3）Pandas
+##### （3）Pandas
 
   用于高效处理大型数据集、执行数据分析任务的python库，是基于Numpy的工具包。
 
 下载地址：https://pypi.python.org/pypi/pandas/0.20.1
 
-#####（4）Numpy
+##### （4）Numpy
 
   用于存储和处理大型矩阵的工具包。
 
 下载地址：https://pypi.python.org/pypi/numpy
 
-#####（5）Scikit-learn
+##### （5）Scikit-learn
 
   用于机器学习的python工具包，python模块引用名字为sklearn，安装前还需要Numpy和Scipy两个Python库。
 
@@ -56,7 +56,7 @@
 
 本实例中主要用到了该模块中的feature_extraction、KMeans（k-means聚类算法）和PCA（pac降维算法）。
 
-#####（6）Matplotlib
+##### （6）Matplotlib
 
  Matplotlib是一个python的图形框架，用于绘制二维图形。
 
