@@ -60,7 +60,7 @@ def main():
     dataFile = 'data/sample_data.csv'
     data = pd.read_csv(dataFile)
     # 停用词表
-    stopkey = [w.strip() for w in codecs.open('data/stopWord.txt', 'r', encoding='utf-8').readlines()]
+    stopkey = [w.strip() for w in codecs.open('data/stopWord.txt', 'r').readlines()]
     # 词向量模型
     inp = 'wiki.zh.text.vector'
     model = gensim.models.KeyedVectors.load_word2vec_format(inp, binary=False)
